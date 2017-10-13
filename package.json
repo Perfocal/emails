@@ -1,0 +1,30 @@
+{
+  "name": "@perfocal/emails",
+  "version": "1.0.0",
+  "description": "Perfocal v2 static web pages",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor -n error -w . -e 'ejs,js,html,json' index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perfocal/emails.git"
+  },
+  "author": "Tony Xu",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Perfocal/emails/issues"
+  },
+  "homepage": "https://github.com/Perfocal/emails#readme",
+  "dependencies": {
+    "all": "0.0.0",
+    "connect": "^3.6.5",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "serve-static": "^1.13.1"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
