@@ -98,7 +98,7 @@ td {
   max-width: 152px; }
 
 .col_12 {
-  max-width: 192px; }
+  max-width: 202px; }
 
 .col_2 {
   max-width: 304px; }
@@ -492,6 +492,7 @@ ul li {
   font-size: 15px;
   line-height: 28px;
 }
+
 
 .footer .column_cell {
   padding-left: 0px;
