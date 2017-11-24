@@ -9,27 +9,6 @@
 						<tbody>
 							<%- include('parts/email-nav.ejs'); -%>
 								<tr>
-									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-3.png) no-repeat top / 100% auto;">
-										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tbody>
-												<tr>
-													<td class="column_cell sc pt tc">
-														<table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-															<tbody>
-																<tr>
-																	<td class="content_b"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/heart.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" /></td>
-																</tr>
-															</tbody>
-														</table>
-														<h1 class="sc">Thanks for using Perfocal!</h1>
-														<p class="lead mb">Please verify your email address and set your password.</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								<tr>
 									<td class="content_cell tc">
 										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tbody>
@@ -38,9 +17,10 @@
 												</tr>
 												<tr>
 													<td class="column_cell tl switch_tc">
-														<p>Hi {%= customer_first.name%}, </p>
-														<p>Thank you for using Perfocal. Great choice! We are the best way of hiring an awesome photographer on-demand :) </p>
-														<p>As a first-time customer, please click the button below to verify your email address and create a password so you can securely access to your bookings and galleries in the future.</p>
+														<p>Hi {%= photog_first.name%}, </p>
+														<p>We're glad to let you know that your work for booking <b>#SWEXHQ</b> have been delivered. The client now has been given 5 days to confirm and your pay will be transferred into your Stripe account right after. Tap the button below to view
+															this booking in your dashboard.
+														</p>
 													</td>
 												</tr>
 											</tbody>
@@ -52,7 +32,7 @@
 										<table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
 											<tbody>
 												<tr>
-													<td class="accent_b"><a href="#"><span>Verify email and create password</span></a></td>
+													<td class="default_b" style="min-width:200px;"><a href="#"><span>View in my dashboard</span></a></td>
 												</tr>
 											</tbody>
 										</table>
@@ -64,7 +44,7 @@
 											<tbody>
 												<tr>
 													<td class="column_cell tl switch_tc">
-														<p>Best regards, <br>Perfocal Team</p>
+														<p>Thanks, <br>Perfocal Team</p>
 													</td>
 												</tr>
 											</tbody>
@@ -79,7 +59,6 @@
 					<!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
 				</td>
 			</tr>
-
 		</tbody>
 	</table>
 	<%- include('parts/email-footer.ejs'); -%>

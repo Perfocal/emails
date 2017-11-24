@@ -1,9 +1,9 @@
 <%- include('parts/email-head.ejs'); -%>
 	<!-- content -->
-	<table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<table role="presentation" class="email_table pb" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
-				<td class="email_body email_start  tc">
+				<td class="email_body email_start tc">
 					<!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
 					<table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tbody>
@@ -38,8 +38,8 @@
 												</tr>
 												<tr>
 													<td class="column_cell tl switch_tc">
-														<p>Hi, {%= customer_first.name%}, </p>
-														<p>Thank you once more for using Perfocal! Your booking #SWEXHQ with us is now closed and we have released the payment to your photographer {%= photog_first.name%}. You can always contact us <a href="">here</a> if you have any questions.
+														<p>Hi {%= customer_first.name%}, </p>
+														<p>Thank you once more for using Perfocal! Your booking #SWEXHQ with us is now closed and we have released the payment to your photographer {%= photog_first.name%}.
 														</p>
 														<p>Enjoy your beautiful pictures :)</p>
 													</td>

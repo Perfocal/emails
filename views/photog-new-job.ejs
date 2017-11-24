@@ -3,7 +3,7 @@
 	<table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
-				<td class="email_body email_start tc">
+				<td class="email_body email_start tc pb">
 					<!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
 					<table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tbody>
@@ -38,10 +38,10 @@
 												</tr>
 												<tr>
 													<td class="column_cell tl switch_tc">
-														<p>Hi, {%= photog_first.name%}, </p>
+														<p>Hi {%= photog_first.name%}, </p>
 														<p>You just got a booking request from {%customer first name%}, awesome!</p>
-														<p>You have an exlusive decision window until <strong>14:34</strong>. You will secure this job immediately if you accept it in this window. You can still accept and get this job after that as long as it is not picked up by another photographer.
-															If this job is not for you, please drop it now so next photographer will be notified.</p>
+														<!-- <p>You have an exlusive decision window until <strong>14:34</strong>. You will secure this job immediately if you accept it in this window. You can still accept and get this job after that as long as it is not picked up by another photographer.
+															If this job is not for you, please drop it now so next photographer will be notified.</p> -->
 														<p><strong>Here are the job details:</strong></p>
 													</td>
 												</tr>
@@ -53,22 +53,46 @@
 								<%- include('parts/booking-details-2.ejs') -%>
 
 									<tr>
-										<td class="column_cell tc">
-											<table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+										<td class="content_cell tc bt">
+											<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
 												<tbody>
 													<tr>
-														<td class="default_b"><a href="#"><span>Accept</span></a></td>
+														<td class="content_cell" height="16">&nbsp;</td>
 													</tr>
-												</tbody>
-											</table>
-											<table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
-												<tbody>
 													<tr>
-														<td class="accent_b-2"><a href="#"><span>Drop</span></a></td>
+														<td class="column_cell tl switch_tc">
+															<p>You have an exlusive decision window until <strong>14:34</strong>. You will secure this job immediately if you accept it in this window. You can still accept and get this job after that as long as it is not picked up by another photographer.
+																If this job is not for you, please drop it now so next photographer will be notified.</p>
+														</td>
 													</tr>
 												</tbody>
 											</table>
 										</td>
+									</tr>
+									<tr>
+										<td class="content_cell content_b pt pb">
+											<!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+											<div class="col_2">
+												<table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+													<tbody>
+														<tr>
+															<td class="default_b" style="min-width: 210px;"><a href="#"><span>Accept</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+											<div class="col_2">
+												<table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+													<tbody>
+														<tr>
+															<td class="accent_b-2"><a href="#"><span>Drop</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<!--[if (mso)|(IE)]></td><![endif]-->
 									</tr>
 									<tr>
 										<td class="content_cell tc">

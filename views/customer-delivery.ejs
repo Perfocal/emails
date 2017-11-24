@@ -1,6 +1,6 @@
 <%- include('parts/email-head.ejs'); -%>
 	<!-- content -->
-	<table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<table role="presentation" class="email_table pb" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
 				<td class="email_body email_start  tc">
@@ -9,7 +9,7 @@
 						<tbody>
 							<%- include('parts/email-nav.ejs'); -%>
 								<tr>
-									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
+									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-3.png) no-repeat top / 100% auto;">
 										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tbody>
 												<tr>
@@ -17,12 +17,12 @@
 														<table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
 															<tbody>
 																<tr>
-																	<td class="content_b"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/mail.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" /></td>
+																	<td class="content_b"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/mail-photo.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" /></td>
 																</tr>
 															</tbody>
 														</table>
-														<h1 class="sc">Welcome to Perfocal</h1>
-														<p class="lead mb">Please verify your email address.</p>
+														<h1 class="sc">Look so great :)</h1>
+														<p class="lead mb">Photos of booking #DDDXXX are ready for download.</p>
 													</td>
 												</tr>
 											</tbody>
@@ -38,8 +38,8 @@
 												</tr>
 												<tr>
 													<td class="column_cell tl switch_tc">
-														<p>Hi, {%= photog_first.name%}, </p>
-														<p>Thanks for signing up for Perfocal! Please click the button below to verify your email address. If you did not sign up for this account, please ignore this message.</p>
+														<p>Hi {%= client_first.name%}, </p>
+														<p>Great news! Your photos of booking <b>#SWEXHQ</b> are ready! Tap the button below to view and download them from your gallery!</p>
 													</td>
 												</tr>
 											</tbody>
@@ -47,30 +47,28 @@
 									</td>
 								</tr>
 								<tr>
-									<tr>
-										<td class="column_cell tc">
-											<table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
-												<tbody>
-													<tr>
-														<td class="accent_b-2"><a href="#"><span>Verify my email</span></a></td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-									</tr>
-									<tr>
-										<td class="content_cell tc">
-											<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-												<tbody>
-													<tr>
-														<td class="column_cell tl switch_tc">
-															<p>Best regards, <br>Perfocal Team</p>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-									</tr>
+									<td class="column_cell tc">
+										<table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
+											<tbody>
+												<tr>
+													<td class="default_b" style="min-width:200px;"><a href="#"><span>Go to my gallery</span></a></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="content_cell tc">
+										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tbody>
+												<tr>
+													<td class="column_cell tl switch_tc">
+														<p>Cheers, <br>Perfocal Team</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
 								</tr>
 								<tr>
 									<td class="content_cell content_b brb tc" height="16">&nbsp; </td>
@@ -80,7 +78,6 @@
 					<!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
 				</td>
 			</tr>
-
 		</tbody>
 	</table>
 	<%- include('parts/email-footer.ejs'); -%>
