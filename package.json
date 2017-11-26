@@ -4,7 +4,7 @@
   "description": "Perfocal v2 static web pages",
   "main": "index.js",
   "scripts": {
-    "start": "supervisor -n error -w . -e 'ejs,js,html,json' index.js",
+    "start": "supervisor -n error -w . -e 'ejs,js,html,json' build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
