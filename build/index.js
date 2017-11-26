@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
-const PAGE_ROOT = "../views";
+const PAGE_ROOT = "..";
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, PAGE_ROOT));

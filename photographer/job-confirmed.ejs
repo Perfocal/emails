@@ -1,13 +1,13 @@
-<%- include('parts/email-head.ejs'); -%>
+<%- include('../parts/email-head.ejs'); -%>
 	<!-- content -->
-	<table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<table role="presentation" class="email_table pb" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>
 			<tr>
 				<td class="email_body email_start  tc">
 					<!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
 					<table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tbody>
-							<%- include('parts/email-nav.ejs'); -%>
+							<%- include('../parts/email-nav.ejs'); -%>
 								<tr>
 									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-2.png) no-repeat top / 100% auto;">
 										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -21,8 +21,8 @@
 																</tr>
 															</tbody>
 														</table>
-														<h1 class="sc">You rock!</h1>
-														<p class="lead mb">Your application at Perfocal has been approved.</p>
+														<h1 class="sc">Congrats!</h1>
+														<p class="lead mb">You've got booking #DDDXXX.</p>
 													</td>
 												</tr>
 											</tbody>
@@ -39,10 +39,9 @@
 												<tr>
 													<td class="column_cell tl switch_tc">
 														<p>Hi {%= photog_first.name%}, </p>
-														<p>We are thrilled to inform you that your application of joining Perfocal is now approved, congratulations!</p>
-														<p>One last step, tell us how you can receive payments by connecting your Stripe account. Stripe is the best way to accept payments online. It handles billions of dollars every year for great companies like Facebook, Twitter, Kickstarter, and
-															of course, Perfocal! What's better, it will be FREE for you (we'll cover all the transfer fees).</p>
-														<p>You can do it easily from your Perfocal dashboard:</p>
+														<p>Congratulations, you have just secured booking #DDDXXX. Yes, that <b>2-hour business event shoot</b> on <b>19:15 30 Nov 2017</b> at <b>86 St. Mary Street, London, SE1 2SW,</b> with an expected pay of <b>£90</b>. </p>
+														<p>Next, please <b>contact your client Scott at +44 7955 308 858</b> as soon as possible to arrange everything in detail. Once you've done the shooting, simply upload <b>unedited files</b> in your dashboard <b>within 12 hours after the shoot</b>,
+															our editor team will take over from there so you can sit back and have a nice cup of tea :)</p>
 													</td>
 												</tr>
 											</tbody>
@@ -50,31 +49,42 @@
 									</td>
 								</tr>
 								<tr>
-									<tr>
-										<td class="column_cell tc">
-											<table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
+									<td class="content_cell content_b pt pb">
+										<!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+										<div class="col_2">
+											<table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
 												<tbody>
 													<tr>
-														<td class="default_b"><a href="#"><span>Go to my dashboard</span></a></td>
+														<td class="default_b" style="min-width: 210px;"><a href="#"><span>View in my dashboard</span></a></td>
 													</tr>
 												</tbody>
 											</table>
-										</td>
-									</tr>
-									<tr>
-										<td class="content_cell tc">
-											<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+										</div>
+										<!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+										<div class="col_2">
+											<table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
 												<tbody>
 													<tr>
-														<td class="column_cell tl switch_tc">
-															<p>Happy photographing, <br>Perfocal Team</p>
-															<p class="tm">Lean more about Stripe at <a href="https://stripe.com/about" style="text-decoration:underline;">https://stripe.com/about</a></p>
-														</td>
+														<td class="content_b"><a href="sms://012345679;?&body=Hi%20there,%20I%20am%20your%20Perfocal%20photographer%20:)%20Could%20you%20tell%20me%20more%20about%20the%20shoot?%20"><span>SMS the client now</span></a></td>
 													</tr>
 												</tbody>
 											</table>
-										</td>
-									</tr>
+										</div>
+									</td>
+									<!--[if (mso)|(IE)]></td><![endif]-->
+								</tr>
+								<tr>
+									<td class="content_cell tc">
+										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tbody>
+												<tr>
+													<td class="column_cell tl switch_tc">
+														<p>Cheers, <br>Perfocal Team</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
 								</tr>
 								<tr>
 									<td class="content_cell content_b brb tc" height="16">&nbsp; </td>
@@ -86,7 +96,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<%- include('parts/email-footer.ejs'); -%>
+	<%- include('../parts/email-footer.ejs'); -%>
 		</body>
 
 		</html>

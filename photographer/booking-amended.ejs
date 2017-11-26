@@ -1,4 +1,4 @@
-<%- include('parts/email-head.ejs'); -%>
+<%- include('../parts/email-head.ejs'); -%>
 	<!-- content -->
 	<table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tbody>
@@ -7,9 +7,9 @@
 					<!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
 					<table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tbody>
-							<%- include('parts/email-nav.ejs'); -%>
+							<%- include('../parts/email-nav.ejs'); -%>
 								<tr>
-									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-3.png) no-repeat top / 100% auto;">
+									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
 										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tbody>
 												<tr>
@@ -17,12 +17,12 @@
 														<table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
 															<tbody>
 																<tr>
-																	<td class="content_b"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/mail-fast.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" /></td>
+																	<td class="content_b"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/danger.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" /></td>
 																</tr>
 															</tbody>
 														</table>
-														<h1 class="sc">Thank you!</h1>
-														<p class="lead mb">Your perfect photoragpher is on their way.</p>
+														<h1 class="sc">Please notice</h1>
+														<p class="lead mb">Changes of booking #DDDXXX</p>
 													</td>
 												</tr>
 											</tbody>
@@ -39,8 +39,8 @@
 												<tr>
 													<td class="column_cell tl switch_tc">
 														<p>Hi {%= photog_first.name%}, </p>
-														<p>We've received your booking, thank you! We'll notify you when your photographer has been arranged, which shouldn't take long. One less thing to worry about, way to go!</p>
-														<p><strong>Here are your booking details:</strong></p>
+														<p>We would like to notice you that booking #DDDXXX has just been amended by the client. </p>
+														<p><strong>Here are the updated job details:</strong></p>
 													</td>
 												</tr>
 											</tbody>
@@ -48,10 +48,23 @@
 									</td>
 								</tr>
 
-								<%- include('parts/booking-details.ejs') -%>
+								<%- include('../parts/booking-details-2.ejs') -%>
 
 									<tr>
-										<td class="content_cell bt" height="16">&nbsp;</td>
+										<td class="content_cell tc bt">
+											<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+												<tbody>
+													<tr>
+														<td class="content_cell" height="16">&nbsp;</td>
+													</tr>
+													<tr>
+														<td class="column_cell tl switch_tc">
+															<p>If the client hasn't notifed you about this change, we recommend contacting him/her as soon as possible. </p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
 									</tr>
 									<tr>
 										<td class="content_cell tc">
@@ -59,7 +72,7 @@
 												<tbody>
 													<tr>
 														<td class="column_cell tl switch_tc">
-															<p>Cheers, <br>Perfocal Team</p>
+															<p>Happy photographing, <br>Perfocal Team</p>
 														</td>
 													</tr>
 												</tbody>
@@ -77,7 +90,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<%- include('parts/email-footer.ejs'); -%>
+	<%- include('../parts/email-footer.ejs'); -%>
 		</body>
 
 		</html>
