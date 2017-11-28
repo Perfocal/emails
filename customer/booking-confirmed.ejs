@@ -45,11 +45,11 @@
                         <tr>
                           <td class="column_cell tl switch_tc">
                             <p>Hi
-                              <%= //user.firstName %>,</p>
+                              <%= user.firstName %>,</p>
                             <p>
                               We have picked our talented pro
                               <%= photog.user.firstName %> to capture your event on
-                                <b><%= event.starts %></b> at <b><%= event.address %></b>.
+                                <b><%= starts %></b> at <b><%= event.address %></b>.
                             </p>
                             <p>
                               Feel free to view her/his profile at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
@@ -68,7 +68,7 @@
                         <tbody>
                           <tr>
                             <td class="default_b" style="min-width: 210px;">
-                              <a href="#">
+                              <a href="<%= href %>">
                                 <span>View details</span>
                               </a>
                             </td>

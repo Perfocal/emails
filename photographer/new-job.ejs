@@ -95,7 +95,7 @@
                             </th>
                             <td class="column_cell tl">
                               <p class="lead">
-                                <%= event.scene.purpose %> Event
+                                <%= event.sceneName %>
                               </p>
                             </td>
                           </tr>
@@ -112,7 +112,7 @@
                             </th>
                             <td class="column_cell tl">
                               <p class="lead">
-                                <%= event.starts %>
+                                <%= starts %>
                               </p>
                             </td>
                           </tr>
@@ -129,7 +129,7 @@
                             </th>
                             <td class="column_cell tl">
                               <p class="lead">
-                                <%= event.package.duration %>-hour Package
+                                <%= event.duration %> Package
                               </p>
                             </td>
                           </tr>
@@ -190,7 +190,7 @@
                             <td class="column_cell tl">
                               <p class="lead">
                                 £
-                                <%= event.package.photographerFee %>
+                                <%= fee %>
                               </p>
                               <p class="tm">
                                 Note: There is no editing work, our editors will handle it for you :)
@@ -229,9 +229,9 @@
                         <tbody>
                           <tr>
                             <td class="default_b" style="min-width: 210px;">
-                              <a href="#">
-                      <span>Accept</span>
-                    </a>
+                              <a href="<%= href %>">
+                                <span>Accept</span>
+                              </a>
                             </td>
                           </tr>
                         </tbody>
@@ -243,9 +243,9 @@
                         <tbody>
                           <tr>
                             <td class="accent_b-2">
-                              <a href="#">
-                        <span>Drop</span>
-                      </a>
+                              <a href="<%= href %>">
+                                <span>Drop</span>
+                              </a>
                             </td>
                           </tr>
                         </tbody>

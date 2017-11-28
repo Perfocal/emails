@@ -51,7 +51,7 @@
                         <tr>
                           <td class="column_cell tl switch_tc">
                             <p>Hi
-                              <%= //user.firstName %>,</p>
+                              <%= user.firstName %>,</p>
                             <p>Great news! Your photos of booking <b>[#<%= event.id %>]</b> are ready! Tap the button below to view and download them from your gallery!</p>
                           </td>
                         </tr>
@@ -65,7 +65,7 @@
                       <tbody>
                         <tr>
                           <td class="default_b" style="min-width:200px;">
-                            <a href="#">
+                            <a href="<%= href %>">
                               <span>Go to my gallery</span>
                             </a>
                           </td>
