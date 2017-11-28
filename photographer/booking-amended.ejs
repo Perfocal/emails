@@ -28,7 +28,7 @@
                             </table>
                             <h1 class="sc">Please notice</h1>
                             <p class="lead mb">
-                              Changes of booking <b><%= //event.id %></b>
+                              Changes of booking <b>[#<%= event.id %>]</b>
                             </p>
                           </td>
                         </tr>
@@ -45,9 +45,9 @@
                         </tr>
                         <tr>
                           <td class="column_cell tl switch_tc">
-                            <p>Hi <%= //photog.firstName %>,</p>
+                            <p>Hi <%= photog.user.firstName %>,</p>
                             <p>
-                              We would like to notify you that booking <b><%= //event.id %></b> has just been amended by the client. 
+                              We would like to notify you that booking <b>[#<%= event.id %>]</b> has just been amended by the client. 
                             </p>
                             <p>
                               <b>Here are the updated job details:</b>

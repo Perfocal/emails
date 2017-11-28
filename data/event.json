@@ -1,0 +1,30 @@
+{
+  "id": "1",
+  "sceneId": 1,
+  "customerId": 1, 
+  "email": "aleksandr@vorontsov.co.uk",
+  "phone": "0123456789",
+  "firstName": "Aleksandr",
+  "lastName": "Vorontsov",
+  "additionalDetails": "testing testing 123",
+  "numberOfGuests": 10,
+  "venueType": "indoor",
+  "scene": {
+    "purpose": "Personal"
+  },
+  "payments": {
+    "fee": 120
+  },
+  "package": {
+    "name": "name",
+    "price": "25",
+    "duration": "3",
+    "photographerFee": 120
+  },
+  "requests": {
+    "id": 1,
+    "eventId": "1",
+    "rank": 1,
+    "photographerId": 1
+  }
+}

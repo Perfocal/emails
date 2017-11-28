@@ -27,7 +27,7 @@
                               </tbody>
                             </table>
                             <h1 class="sc">Congrats!</h1>
-                            <p class="lead mb">You've got booking <b><%= //event.id %></b>.</p>
+                            <p class="lead mb">You've got booking <b>[#<%= event.id %>]</b>.</p>
                           </td>
                         </tr>
                       </tbody>
@@ -43,12 +43,12 @@
                         </tr>
                         <tr>
                           <td class="column_cell tl switch_tc">
-                            <p>Hi <%= //photog.firstName %>,</p>
+                            <p>Hi <%= photog.user.firstName %>,</p>
                             <p>
-                              Congratulations, you have just secured booking <b><%= //event.id %></b>. Yes, that <b><%= //event.package.duration %>-hour <%= //event.scene.purpose %> event shoot</b> on <b><%= //event.starts %></b> at <b><%= //event.address %>,</b> with an expected pay of <b><%= //event.payments.fee %></b>.
+                              Congratulations, you have just secured booking <b>[#<%= event.id %>]</b>. Yes, that <b><%= event.package.duration %>-hour <%= event.scene.purpose %> event shoot</b> on <b><%= event.starts %></b> at <b><%= event.address %>,</b> with an expected pay of <b><%= event.pricing.photographerFee %></b>.
                             </p>
                             <p>
-                              Next, please <b>contact your client <%= //event.firstName %> at <%= //event.phone %></b> as soon as possible to arrange everything in detail. Once you've done the shooting, simply upload <b>unedited files</b> in your dashboard <b>within 12 hours after the shoot</b>, our editor team will take over from there so you can sit back and have a nice cup of tea :)
+                              Next, please <b>contact your client <%= event.firstName %> at <%= event.phone %></b> as soon as possible to arrange everything in detail. Once you've done the shooting, simply upload <b>unedited files</b> in your dashboard <b>within 12 hours after the shoot</b>, our editor team will take over from there so you can sit back and have a nice cup of tea :)
                             </p>
                           </td>
                         </tr>
@@ -74,7 +74,7 @@
                             <tbody>
                               <tr>
                                 <td class="content_b">
-                                  <a href="sms://<%= //event.phone %>;?&body=Hi%20there,%20I%20am%20your%20Perfocal%20photographer%20:)%20Could%20you%20tell%20me%20more%20about%20the%20shoot?%20">
+                                  <a href="sms://<%= event.phone %>;?&body=Hi%20there,%20I%20am%20your%20Perfocal%20photographer%20:)%20Could%20you%20tell%20me%20more%20about%20the%20shoot?%20">
                                     <span>SMS the client now</span>
                                   </a>
                                 </td>

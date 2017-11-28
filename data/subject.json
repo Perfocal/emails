@@ -1,0 +1,20 @@
+{
+  "/customer/booking-closed": "[#${event.id}] Booking Closed",
+  "/customer/booking-confirmed": "[#${event.id}] Your photographer has been chosen!",
+  "/customer/booking-received": "[#${event.id}] We've received your booking.",
+  "/customer/delivery": "[#${event.id}] Your photos are ready.",
+  "/customer/onboard": "Email Verification Required",
+  "/photographer/application-approved": "Congratulations!",
+  "/photographer/application-received": "Application Received",
+  "/photographer/application-rejected": "Application Unsuccessful",
+  "/photographer/booking-amended": "[#${event.id}] Changes to booking details",
+  "/photographer/booking-cancelled": "[#${event.id}]Booking Cancelled",
+  "/photographer/booking-closed": "[#${event.id}] Booking is now closed",
+  "/photographer/delivery": "[#${event.id}] Your work has been sent to the client.",
+  "/photographer/job-confirmed": "[#${event.id}] New booking secured, nice one!",
+  "/photographer/job-overdue": "[#${event.id}] Work Submission Overdue",
+  "/photographer/new-job": "New Booking Request",
+  "/photographer/onboard": "Email Verification Required",
+  "/photographer/shoot-reminder": "[#${event.id}] Shoot reminder",
+  "/reset-password": "Perfocal Password Reset"
+}

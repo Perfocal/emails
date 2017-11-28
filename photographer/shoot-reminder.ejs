@@ -12,7 +12,7 @@
               <tbody>
                 <%- include('../parts/email-nav.ejs'); -%>
                 <tr>
-                  <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-3.png) no-repeat top / 100% auto;">
+                  <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
@@ -21,13 +21,15 @@
                               <tbody>
                                 <tr>
                                   <td class="content_b">
-                                    <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/mail-fast.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" />
+                                    <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/danger.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" />
                                   </td>
                                 </tr>
                               </tbody>
                             </table>
-                            <h1 class="sc">Thank you!</h1>
-                            <p class="lead mb">Your perfect photographer is on their way.</p>
+                            <h1 class="sc">Reminder!</h1>
+                            <p class="lead mb">
+                              You have a shoot for booking <b>[#<%= event.id %>]</b> tomorrow.
+                            </p>
                           </td>
                         </tr>
                       </tbody>
@@ -43,12 +45,12 @@
                         </tr>
                         <tr>
                           <td class="column_cell tl switch_tc">
-                            <p>Hi <%= user.firstName %>,</p>
+                            <p>Hi <%= photog.user.firstName %>,</p>
                             <p>
-                              We've received your booking, thank you! We'll notify you when your photographer has been arranged, which shouldn't take long. One less thing to worry about, way to go!
+                              This is a reminder for booking <b>[#<%= event.id %>]</b> which is taking place tomorrow.
                             </p>
                             <p>
-                              <b>Here are your booking details:</b>
+                              <b>Here are the job details:</b>
                             </p>
                           </td>
                         </tr>
@@ -56,10 +58,7 @@
                     </table>
                   </td>
                 </tr>
-                <%- include('../parts/booking-details.ejs') -%>
-                <tr>
-                  <td class="content_cell bt" height="16">&nbsp;</td>
-                </tr>
+                <%- include('../parts/booking-details-2.ejs') -%>
                 <tr>
                   <td class="content_cell tc">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -67,7 +66,7 @@
                         <tr>
                           <td class="column_cell tl switch_tc">
                             <p>
-                              Cheers,<br>Perfocal Team
+                              Happy photographing,<br>Perfocal Team
                             </p>
                           </td>
                         </tr>

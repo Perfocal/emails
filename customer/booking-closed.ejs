@@ -25,7 +25,7 @@
                               </tbody>
                             </table>
                             <h1 class="sc">Thank you again!</h1>
-                            <p class="lead mb">Your booking <b><%= //event.id %></b> is now closed.</p>
+                            <p class="lead mb">Your booking <b>[#<%= event.id %>]</b> is now closed.</p>
                           </td>
                         </tr>
                       </tbody>
@@ -42,7 +42,7 @@
                         <tr>
                           <td class="column_cell tl switch_tc">
                             <p>Hi <%= //user.firstName %>,</p>
-                            <p>Thank you once more for using Perfocal! Your booking <b><%= //event.id %></b> with us is now closed and we have released the payment to your photographer <%= //photog.firstName %>.</p>
+                            <p>Thank you once more for using Perfocal! Your booking <b>[#<%= event.id %>]</b> with us is now closed and we have released the payment to your photographer <%= photog.user.firstName %>.</p>
                             <p>Enjoy your beautiful pictures :)</p>
                           </td>
                         </tr>

@@ -17,12 +17,12 @@
                       <tbody>
                         <tr>
                           <td class="column_cell py tc">
-                            <p class="mb_xs tm"><%= //user.firstName %>, meet your photographer</p>
+                            <p class="mb_xs tm"><%= user.firstName %>, meet your photographer</p>
                             <p class="mb_xs imgr">
                               <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/images/default_profile.svg" width="96" height="96" alt="photographer profile" style="border-radius: 50%;max-width:96px;">
                             </p>
-                            <h2 class="mt_0 mb_0"><%= //photog.firstName %></h2>
-                            <p class="lead">"<%= //photog.bio %>"</p>
+                            <h2 class="mt_0 mb_0"><%= photog.user.firstName %></h2>
+                            <p class="lead">"<%= photog.bio %>"</p>
                           </td>
                         </tr>
                       </tbody>
@@ -37,8 +37,8 @@
                           <td class="column_cell tl switch_tc">
                             <p>Hi <%= //user.firstName %>,</p>
                             <p>
-                              We have picked our talented pro <%= //photog.firstName %> to capture your event on 
-                              <b><%= //event.starts %></b> at <b><%= //event.address %></b>.
+                              We have picked our talented pro <%= photog.user.firstName %> to capture your event on 
+                              <b><%= event.starts %></b> at <b><%= event.address %></b>.
                             </p>
                             <p>
                               Feel free to view her/his profile at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
@@ -71,8 +71,8 @@
                         <tbody>
                           <tr>
                             <td class="content_b">
-                              <a href="sms://<%= //photog.phone %>">
-                                <span>SMS <%= //photog.firstName %> now</span>
+                              <a href="sms://<%= photog.phone %>">
+                                <span>SMS <%= photog.user.firstName %> now</span>
                               </a>
                             </td>
                           </tr>
