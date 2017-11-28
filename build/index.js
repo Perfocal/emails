@@ -1,4 +1,5 @@
 const express = require('express');
+const ejs = require('ejs');
 const app = express();
 const path = require('path');
 const fs = require('fs');
@@ -10,6 +11,8 @@ const subject = require('../data/subject.json');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, PAGE_ROOT));
+
+ejs.delimiter = "&";
 
 (function injectData (pathname){
   const fullPath = path.join(__dirname, PAGE_ROOT, pathname);

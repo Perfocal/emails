@@ -1,16 +1,23 @@
-<%- include('../parts/html.ejs'); %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-  <%- include('../parts/html-head.ejs'); %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/style.css" rel="stylesheet" type="text/css" />
+  <title>
+    <%= subject %>
+  </title>
 </head>
+
 <body>
   <table role="presentation" class="email_table pb" width="100%" border="0" cellspacing="0" cellpadding="0">
     <tbody>
       <tr>
         <td class="email_body email_start  tc">
           <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-            <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tbody>
-                <%- include('../parts/email-nav.ejs'); -%>
+          <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <%- include('../parts/email-nav.ejs'); -%>
                 <tr>
                   <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-3.png) no-repeat top / 100% auto;">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -43,7 +50,8 @@
                         </tr>
                         <tr>
                           <td class="column_cell tl switch_tc">
-                            <p>Hi <%= //user.firstName %>,</p>
+                            <p>Hi
+                              <%= //user.firstName %>,</p>
                             <p>Great news! Your photos of booking <b>[#<%= event.id %>]</b> are ready! Tap the button below to view and download them from your gallery!</p>
                           </td>
                         </tr>
@@ -73,7 +81,8 @@
                         <tr>
                           <td class="column_cell tl switch_tc">
                             <p>
-                              Cheers,<br>Perfocal Team
+                              Cheers,
+                              <br>Perfocal Team
                             </p>
                           </td>
                         </tr>
@@ -84,13 +93,83 @@
                 <tr>
                   <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
                 </tr>
-              </tbody>
-            </table>
-            <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
-          </td>
-        </tr>
+            </tbody>
+          </table>
+          <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- footer_alt -->
+  <table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td class="email_body email_end tc footer">
+          <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <table role="presentation" class="content_section" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell py">
+                  <!--[if (mso)|(IE)]><table role="presentation" width="624" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:624px;Margin:0 auto;"><tbody><tr><td width="468" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <table role="presentation" class="column tl switch_tc" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell">
+                          <p>Sent by Perfocal from a notification-only email address. If you have any questions, please email us at <a href="mailto:help@perfocal.com">help@perfocal.com</a>.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="column_cell">
+                          <p class="mb_0"><a class="logo_c tr switch_tc" href="#"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/logo_xs_grey.png" alt="Perfocal"/></a>&nbsp; &nbsp; <span style="border-left: 1px solid #a09fb0;">&nbsp; &nbsp;Everyone's perfect photographer.</span>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!--[if (mso)|(IE)]><table role="presentation" width="624" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:624px;Margin:0 auto;"><tbody><tr><td width="468" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_3">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell tl switch_tc">
+                            <p>
+                              &copy; 2017 Perfocal Limited
+                              <br/>
+                              <span class="tm">WeWork Aldgate Tower, 2 Leman Street, London, E1 8FA</span>
+                            </p>
+                            <!-- <p class="mb_0"><a href="#"><span>About</span></a> &nbsp; &nbsp; <a href="#"><span>Products</span></a> &nbsp; &nbsp; <a href="#"><span>Help</span></a> &nbsp; &nbsp; <a href="#"><span>Unsubscribe</span></a></p> -->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="156" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_1">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell tr switch_tc">
+                            <p class="fsocial tm">
+                              <a href="https://facebook.com/perfocal"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/facebook-grey.png" alt="Facebook" /></a>&nbsp; &nbsp; &nbsp;<a href="https://instagram.com/perfocal_official"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/instagram-grey.png" alt="Instagram"/></a>&nbsp; &nbsp; &nbsp; <a href="https://twitter.com/perfocal"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/twitter-grey.png" alt="Twitter"/></a>&nbsp; &nbsp; &nbsp;
+                              <a href="https://plus.google.com/+perfocal"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/google-grey.png" alt="GooglePlus"/></a></p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
+                </td>
+              </tr>
+          </table>
+          <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
+        </td>
+      </tr>
       </tbody>
-    </table>
-    <%- include('../parts/email-footer.ejs'); -%>
-  </body>
-  </html>
+  </table>
+</body>
+
+</html>
