@@ -6,11 +6,11 @@
         <tbody>
           <tr>
             <th class="column_cell" width="28px;">
-              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/info.png" width="28" height="28" alt="Booking:&nbsp;" valign="middle" style="vertical-align: middle;"></p>
+              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/info.png" width="28" height="28" alt="Booking:&nbsp;" valign="middle" style="vertical-align: middle;">
             </th>
             <td class="column_cell tl">
               <p class="lead">
-                Booking #SW6X6H
+                Booking <%= //event.id %>
               </p>
             </td>
           </tr>
@@ -27,7 +27,7 @@
             </th>
             <td class="column_cell tl">
               <p class="lead">
-                Business Event
+                <%= //event.scene.purpose %> Event
               </p>
             </td>
           </tr>
@@ -44,7 +44,7 @@
             </th>
             <td class="column_cell tl">
               <p class="lead">
-                15:30, 27/11/2017
+                <%= //event.starts %>
               </p>
             </td>
           </tr>
@@ -61,7 +61,7 @@
             </th>
             <td class="column_cell tl">
               <p class="lead">
-                3-hour Package
+                <%= //event.package.duration %>-hour Package
               </p>
             </td>
           </tr>
@@ -78,7 +78,7 @@
             </th>
             <td class="column_cell tl">
               <p class="lead">
-                Apartment 80, 121 Upper Richmond Road, London, SW152DW
+                <%= //event.address %>
                 <!-- <span class="fine_type"><a href="#">view in Google Maps -></a></span> -->
               </p>
             </td>
@@ -95,11 +95,12 @@
               <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/note.png" width="28" height="28" alt="Note:&nbsp;" valign="middle" style="vertical-align: middle;">
             </th>
             <td class="column_cell tl">
-              <p class="lead">
-                [Client Name]' Notes: </p>
-              <p class="tm"><b>No. of guests</b>: &lt;20 &nbsp;&nbsp;<b>Venue Type</b>: indoor & outdoor</p>
-              <p class="tm"><b>Additional Details</b>: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehenderit in."
+              <p class="lead"><%= //event.firstName %>' Notes:</p>
+              <p class="tm">
+                <b>No. of guests</b>: <%= //event.numberOfGuests %> &nbsp;&nbsp;<b>Venue Type</b>: <%= //event.venueType %>
+              </p>
+              <p class="tm">
+                <b>Additional Details</b>: "<%= //event.additionalDetails %>"
               </p>
             </td>
           </tr>
@@ -116,9 +117,11 @@
             </th>
             <td class="column_cell tl">
               <p class="lead">
-                £120
+                £<%= //event.payments.fee %>
               </p>
-              <p class="tm"> Note: There is no editing work, our editors will handle it for you :)</p>
+              <p class="tm">
+                Note: There is no editing work, our editors will handle it for you :)
+              </p>
             </td>
           </tr>
         </tbody>

@@ -1,102 +1,115 @@
-<%- include('../parts/email-head.ejs'); -%>
-	<!-- content -->
-	<table role="presentation" class="email_table pb" width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tbody>
-			<tr>
-				<td class="email_body email_start  tc">
-					<!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-					<table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
-						<tbody>
-							<%- include('../parts/email-nav.ejs'); -%>
-								<tr>
-									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-2.png) no-repeat top / 100% auto;">
-										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tbody>
-												<tr>
-													<td class="column_cell sc pt tc">
-														<table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-															<tbody>
-																<tr>
-																	<td class="content_b"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/rock.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" /></td>
-																</tr>
-															</tbody>
-														</table>
-														<h1 class="sc">Congrats!</h1>
-														<p class="lead mb">You've got booking #DDDXXX.</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td class="content_cell tc">
-										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tbody>
-												<tr>
-													<td class="content_cell" height="32">&nbsp;</td>
-												</tr>
-												<tr>
-													<td class="column_cell tl switch_tc">
-														<p>Hi {%= photog_first.name%}, </p>
-														<p>Congratulations, you have just secured booking #DDDXXX. Yes, that <b>2-hour business event shoot</b> on <b>19:15 30 Nov 2017</b> at <b>86 St. Mary Street, London, SE1 2SW,</b> with an expected pay of <b>£90</b>. </p>
-														<p>Next, please <b>contact your client Scott at +44 7955 308 858</b> as soon as possible to arrange everything in detail. Once you've done the shooting, simply upload <b>unedited files</b> in your dashboard <b>within 12 hours after the shoot</b>,
-															our editor team will take over from there so you can sit back and have a nice cup of tea :)</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td class="content_cell content_b pt pb">
-										<!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-										<div class="col_2">
-											<table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
-												<tbody>
-													<tr>
-														<td class="default_b" style="min-width: 210px;"><a href="#"><span>View in my dashboard</span></a></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-										<!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-										<div class="col_2">
-											<table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
-												<tbody>
-													<tr>
-														<td class="content_b"><a href="sms://012345679;?&body=Hi%20there,%20I%20am%20your%20Perfocal%20photographer%20:)%20Could%20you%20tell%20me%20more%20about%20the%20shoot?%20"><span>SMS the client now</span></a></td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</td>
-									<!--[if (mso)|(IE)]></td><![endif]-->
-								</tr>
-								<tr>
-									<td class="content_cell tc">
-										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tbody>
-												<tr>
-													<td class="column_cell tl switch_tc">
-														<p>Cheers, <br>Perfocal Team</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td class="content_cell content_b brb tc" height="16">&nbsp; </td>
-								</tr>
-						</tbody>
-					</table>
-					<!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<%- include('../parts/email-footer.ejs'); -%>
-		</body>
-
-		</html>
+<%- include('../parts/html.ejs'); %>
+<head>
+  <%- include('../parts/html-head.ejs'); %>
+</head>
+<body>
+  <table role="presentation" class="email_table pb" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td class="email_body email_start  tc">
+          <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
+            <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <%- include('../parts/email-nav.ejs'); -%>
+                <tr>
+                  <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-2.png) no-repeat top / 100% auto;">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell sc pt tc">
+                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
+                              <tbody>
+                                <tr>
+                                  <td class="content_b">
+                                    <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/rock.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <h1 class="sc">Congrats!</h1>
+                            <p class="lead mb">You've got booking <b><%= //event.id %></b>.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content_cell tc">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="content_cell" height="32">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="column_cell tl switch_tc">
+                            <p>Hi <%= //photog.firstName %>,</p>
+                            <p>
+                              Congratulations, you have just secured booking <b><%= //event.id %></b>. Yes, that <b><%= //event.package.duration %>-hour <%= //event.scene.purpose %> event shoot</b> on <b><%= //event.starts %></b> at <b><%= //event.address %>,</b> with an expected pay of <b><%= //event.payments.fee %></b>.
+                            </p>
+                            <p>
+                              Next, please <b>contact your client <%= //event.firstName %> at <%= //event.phone %></b> as soon as possible to arrange everything in detail. Once you've done the shooting, simply upload <b>unedited files</b> in your dashboard <b>within 12 hours after the shoot</b>, our editor team will take over from there so you can sit back and have a nice cup of tea :)
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content_cell content_b pt pb">
+                    <!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                      <div class="col_2">
+                        <table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="default_b" style="min-width: 210px;"><a href="#"><span>View in my dashboard</span></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                        <div class="col_2">
+                          <table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td class="content_b">
+                                  <a href="sms://<%= //event.phone %>;?&body=Hi%20there,%20I%20am%20your%20Perfocal%20photographer%20:)%20Could%20you%20tell%20me%20more%20about%20the%20shoot?%20">
+                                    <span>SMS the client now</span>
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                      <!--[if (mso)|(IE)]></td><![endif]-->
+                    </tr>
+                    <tr>
+                      <td class="content_cell tc">
+                        <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell tl switch_tc">
+                                <p>
+                                  Cheers,<br>Perfocal Team
+                                </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <%- include('../parts/email-footer.ejs'); -%>
+      </body>
+      </html>

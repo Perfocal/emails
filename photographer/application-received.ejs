@@ -1,65 +1,74 @@
-<%- include('../parts/email-head.ejs'); -%>
-	<!-- content -->
-	<table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tbody>
-			<tr>
-				<td class="email_body email_start  tc">
-					<!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-					<table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
-						<tbody>
-							<%- include('../parts/email-nav.ejs'); -%>
-								<tr>
-									<td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
-										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tbody>
-												<tr>
-													<td class="column_cell sc pt tc">
-														<table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-															<tbody>
-																<tr>
-																	<td><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/check-white.png" width="64" height="64" alt="check.png" style="max-width:64px;" /></td>
-																</tr>
-															</tbody>
-														</table>
-														<h1 class="sc">Thank you!</h1>
-														<p class="lead mb">We have received your application.</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td class="content_cell tc">
-										<table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-											<tbody>
-												<tr>
-													<td class="content_cell" height="32">&nbsp;</td>
-												</tr>
-												<tr>
-													<td class="column_cell tl switch_tc">
-														<p>Hi {%= photog_first.name%}, </p>
-														<p>Thanks for completing the application process! Our team will review your details and get back to you via email as soon as possible. This shouldn't take more than 24 hours.</p>
-														<p>In the meanwhile, feel free to check our photographer <a href="#">FAQs</a>, or <a href="#">contact us</a> if you have further questions.</p>
-														<p>Keep calm and take more photographs :)<br>Perfocal Team</p>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td class="content_cell content_b brb tc" height="16">&nbsp; </td>
-								</tr>
-						</tbody>
-					</table>
-					<!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
-				</td>
-			</tr>
-
-		</tbody>
-	</table>
-	<%- include('../parts/email-footer.ejs'); -%>
-		</body>
-
-		</html>
+<%- include('../parts/html.ejs'); %>
+<head>
+  <%- include('../parts/html-head.ejs'); %>
+</head>
+<body>
+  <table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td class="email_body email_start  tc">
+          <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
+            <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <%- include('../parts/email-nav.ejs'); -%>
+                <tr>
+                  <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell sc pt tc">
+                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/check-white.png" width="64" height="64" alt="check.png" style="max-width:64px;" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <h1 class="sc">Thank you!</h1>
+                            <p class="lead mb">We have received your application.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content_cell tc">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="content_cell" height="32">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="column_cell tl switch_tc">
+                            <p>Hi <%= //photog.firstName %>,</p>
+                            <p>
+                              Thanks for completing the application process! Our team will review your details and get back to you via email as soon as possible. This shouldn't take more than 24 hours.
+                            </p>
+                            <p>
+                              In the meanwhile, feel free to check our photographer <a href="#">FAQs</a>, or <a href="#">contact us</a> if you have further questions.
+                            </p>
+                            <p>
+                              Keep calm and take more photographs :)<br>Perfocal Team
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+                </tr>
+              </tbody>
+            </table>
+            <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <%- include('../parts/email-footer.ejs'); -%>
+  </body>
+  </html>
