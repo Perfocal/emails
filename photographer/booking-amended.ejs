@@ -17,227 +17,243 @@
           <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
           <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
-              <%- include('../parts/email-nav.ejs'); -%>
-                <tr>
-                  <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
+              <tr>
+                <td class="content_cell content_b brt tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell py tc">
+                          <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/logo.png" width="136" height="32" alt="Perfocal Limited website" style="max-width:140px;" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell sc pt tc">
+                          <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td class="content_b">
+                                  <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/danger.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h1 class="sc">
+                              Please notice
+                            </h1>
+                          <p class="lead mb">
+                            Changes of booking <b>#<%= event.id %></b>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column bb" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="content_cell" height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Hi
+                            <%= photog.firstName %>,
+                          </p>
+                          <p>
+                            We would like to notify you that booking <b>#<%= event.id %></b> has just been amended by the client.
+                          </p>
+                          <p>
+                            <b>Here are the updated job details:</b>
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell content_b pt">
+                  <!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_2">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="column_cell sc pt tc">
-                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="content_b">
-                                    <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/danger.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" />
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <h1 class="sc">Please notice</h1>
-                            <p class="lead mb">
-                              Changes of booking <b>[#<%= event.id %>]</b>
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/info.png" width="28" height="28" alt="Booking:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              Booking #
+                              <%= event.id %>
                             </p>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content_cell tc">
-                    <table role="presentation" class="column bb" width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tbody>
-                        <tr>
-                          <td class="content_cell" height="32">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td class="column_cell tl switch_tc">
-                            <p>Hi
-                              <%= photog.user.firstName %>,</p>
-                            <p>
-                              We would like to notify you that booking <b>[#<%= event.id %>]</b> has just been amended by the client.
-                            </p>
-                            <p>
-                              <b>Here are the updated job details:</b>
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content_cell content_b pt">
-                    <!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_2">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/info.png" width="28" height="28" alt="Booking:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                Booking [#
-                                <%= event.id %>]
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_2">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/cam-5.png" width="28" height="28" alt="Type:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                <%= event.sceneName %>
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_2">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/calendar.png" width="28" height="28" alt="Calendar" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                <%= starts %>
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_2">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/time-1.png" width="28" height="28" alt="Package:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                <%= event.duration %>
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_4">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/location-3.png" width="28" height="28" alt="Location:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                <%= event.address %>
-                                  <!-- <span class="fine_type"><a href="#">view in Google Maps -></a></span> -->
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_4">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/note.png" width="28" height="28" alt="Note:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                <%= event.firstName %>'s Notes:</p>
-                              <p class="tm">
-                                <b>No. of guests</b>:
-                                <%= event.numberOfGuests %> &nbsp;&nbsp;<b>Venue Type</b>:
-                                  <%= event.venueType %>
-                              </p>
-                              <p class="tm">
-                                <b>Additional Details</b>: "
-                                <%= event.additionalDetails %>"
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_4">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/pound.png" width="28" height="28" alt="Pay:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                £
-                                <%= fee %>
-                              </p>
-                              <p class="tm">
-                                Note: There is no editing work, our editors will handle it for you :)
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content_cell tc bt">
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_2">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="content_cell" height="16">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td class="column_cell tl switch_tc">
-                            <p>
-                              If the client hasn't notifed you about this change, we recommend contacting them as soon as possible.
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/cam-5.png" width="28" height="28" alt="Type:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              <%= event.sceneName %>
                             </p>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content_cell tc">
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_2">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="column_cell tl switch_tc">
-                            <p>
-                              Happy photographing,
-                              <br>Perfocal Team
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/calendar.png" width="28" height="28" alt="Calendar" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              <%= starts %>
                             </p>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </td>
-                </tr>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_2">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/time-1.png" width="28" height="28" alt="Package:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              <%= event.duration %>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_4">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/location-3.png" width="28" height="28" alt="Location:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              <%= event.address %>
+                                <!-- <span class="fine_type"><a href="#">view in Google Maps -></a></span> -->
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_4">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/note.png" width="28" height="28" alt="Note:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              <%= event.firstName %>'s Notes:</p>
+                            <p class="tm">
+                              <b>No. of guests</b>:
+                              <%= event.numberOfGuests %> &nbsp;&nbsp;<b>Venue Type</b>:
+                                <%= event.venueType %>
+                            </p>
+                            <p class="tm">
+                              <b>Additional Details</b>: "
+                              <%= event.additionalDetails %>"
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_4">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/pound.png" width="28" height="28" alt="Pay:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              £
+                              <%= fee %>
+                            </p>
+                            <p class="tm">
+                              Note: There is no editing work, our editors will handle it for you :)
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc bt">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="content_cell" height="16">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            If the client hasn't notifed you about this change, we recommend contacting them as soon as possible.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Happy photographing,
+                            <br>Perfocal Team
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
       </tr>
       <tr>
         <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
@@ -264,12 +280,18 @@
                     <tbody>
                       <tr>
                         <td class="column_cell">
-                          <p>Sent by Perfocal from a notification-only email address. If you have any questions, please email us at <a href="mailto:help@perfocal.com">help@perfocal.com</a>.</p>
+                          <p>
+                            Sent by Perfocal from a notification-only email address. If you have any questions, please email us at <a href="mailto:help@perfocal.com">help@perfocal.com</a>.
+                          </p>
                         </td>
                       </tr>
                       <tr>
                         <td class="column_cell">
-                          <p class="mb_0"><a class="logo_c tr switch_tc" href="#"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/logo_xs_grey.png" alt="Perfocal"/></a>&nbsp; &nbsp; <span style="border-left: 1px solid #a09fb0;">&nbsp; &nbsp;Everyone's perfect photographer.</span>
+                          <p class="mb_0">
+                            <a class="logo_c tr switch_tc" href="#">
+                                                  <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/logo_xs_grey.png" alt="Perfocal"/>
+                                                </a> &nbsp; &nbsp;
+                            <span style="border-left: 1px solid #a09fb0;">&nbsp; &nbsp;Everyone's perfect photographer.</span>
                           </p>
                         </td>
                       </tr>
@@ -303,8 +325,19 @@
                         <tr>
                           <td class="column_cell tr switch_tc">
                             <p class="fsocial tm">
-                              <a href="https://facebook.com/perfocal"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/facebook-grey.png" alt="Facebook" /></a>&nbsp; &nbsp; &nbsp;<a href="https://instagram.com/perfocal_official"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/instagram-grey.png" alt="Instagram"/></a>&nbsp; &nbsp; &nbsp; <a href="https://twitter.com/perfocal"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/twitter-grey.png" alt="Twitter"/></a>&nbsp; &nbsp; &nbsp;
-                              <a href="https://plus.google.com/+perfocal"><img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/google-grey.png" alt="GooglePlus"/></a></p>
+                              <a href="https://facebook.com/perfocal">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/facebook-grey.png" alt="Facebook" />
+                                                      </a> &nbsp; &nbsp; &nbsp;
+                              <a href="https://instagram.com/perfocal_official">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/instagram-grey.png" alt="Instagram"/>
+                                                      </a> &nbsp; &nbsp; &nbsp;
+                              <a href="https://twitter.com/perfocal">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/twitter-grey.png" alt="Twitter"/>
+                                                      </a> &nbsp; &nbsp; &nbsp;
+                              <a href="https://plus.google.com/+perfocal">
+                                                        <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/google-grey.png" alt="GooglePlus"/>
+                                                      </a>
+                            </p>
                           </td>
                         </tr>
                       </tbody>
