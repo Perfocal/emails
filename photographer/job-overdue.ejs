@@ -45,7 +45,9 @@
                               </tr>
                             </tbody>
                           </table>
-                          <h1>Job Overdue!</h1>
+                          <h1>
+                            Job Overdue!
+                          </h1>
                           <p class="lead">
                             Please upload photos of booking <b>#<%= event.id %></b> as soon as possible.
                           </p>
@@ -61,13 +63,14 @@
                     <tbody>
                       <tr>
                         <td class="column_cell tl switch_tc">
-                          <p>Dear
-                            <%= photog.firstName %>,</p>
+                          <p>
+                            Dear <%= photog.firstName %>,
+                          </p>
                           <p>
                             Please be reminded that your 12hr delivery window of booking <b>#<%= event.id %></b> has passed and <b>the job is now overdue.</b>
                           </p>
                           <p>
-                            According to our terms, your pay may be reduced due to late delivery if we do not receive unedited files of this booking by <b><%= eventRequest.overdue %></b>. To allow our team edit and deliver final photos on-time, please upload the files as soon as possible.
+                            According to our terms, your pay may be reduced due to late delivery if we do not receive unedited files of this booking by <b><%= starts %></b>. To allow our team edit and deliver final photos on-time, please upload the files as soon as possible.
                           </p>
                         </td>
                       </tr>
@@ -83,8 +86,8 @@
                         <tr>
                           <td class="accent_b-2" width="208px;">
                             <a href="<%= href %>">
-                                <span>Upload now</span>
-                              </a>
+                              <span>Upload now</span>
+                            </a>
                           </td>
                         </tr>
                       </tbody>
