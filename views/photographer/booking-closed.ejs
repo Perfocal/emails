@@ -15,7 +15,7 @@
       <tr>
         <td class="email_body email_start tc pb">
           <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-          <table role="presentation" class="content_section bra box-shadow" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
               <tr>
                 <td class="content_cell content_b brt tc">
@@ -30,39 +30,76 @@
                   </table>
                 </td>
               </tr>
+              <tr>
+                <td class="content_cell default_b pt pbe tc" style="background: url(https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/bg/bg-image-1.png) no-repeat top / 100% auto;">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell sc pt tc">
+                          <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/check-white.png" width="64" height="64" alt="Ok symbol" style="max-width:64px;" /></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h1 class="sc">
+                            You just got paid
+                          </h1>
+                          <p class="lead mb">
+                            Pay of booking #<%= event.id %> released.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="content_cell" height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Hi <%= photog.firstName %>,
+                          </p>
+                          <p>
+                            Good news! As there was no dispute raised by the client, your earning of £<%= fee %> for booking #<%= event.id %> has been transferred to your Stripe account. The booking is now closed.
+                          </p>
+                          <p>
+                            Thank you again for working with Perfocal.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
                 <tr>
-                  <td class="content_cell content_b py tc">
-                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <td class="column_cell tc">
+                    <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="column_cell py tc">
-                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="default_circle-border"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/key.png" width="48" height="48" alt="Secure" style="max-width:48px;" /></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <h1>
-                              Password reset
-                            </h1>
-                            <p class="lead">
-                              Someone has requested to have your password reset.
-                            </p>
-                            <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="accent_b-2">
-                                  	<a href="<%= verifyHref %>">
-                                  		<span>Reset password</span>
-                                  	</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <p class="mt mb_0 tm">
-                              <br/>Click the button above to reset the password of your Perfocal account. If this request was not from you, please ignore this message.
-                            </p>
+                          <td class="default_b" width="208px;">
+                            <a href="<%= href %>">
+                            <span>Check in my dashboard</span>
+                          </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="content_b" width="208px;">
+                            <a href="https://dashboard.stripe.com">
+                            <span>Go to Stripe</span>
+                          </a>
                           </td>
                         </tr>
                       </tbody>
@@ -70,8 +107,25 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+                  <td class="content_cell tc">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell tl switch_tc">
+                            <p>
+                              Regards,
+                              <br>Perfocal Team
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
                 </tr>
+              </tr>
+              <tr>
+                <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+              </tr>
             </tbody>
           </table>
           <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
@@ -103,8 +157,8 @@
                         <td class="column_cell">
                           <p class="mb_0">
                             <a class="logo_c tr switch_tc" href="#">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/logo_xs_grey.png" alt="Perfocal"/>
-                            </a> &nbsp; &nbsp;
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/logo_xs_grey.png" alt="Perfocal"/>
+                          </a>&nbsp; &nbsp;
                             <span style="border-left: 1px solid #a09fb0;">&nbsp; &nbsp;Everyone's perfect photographer.</span>
                           </p>
                         </td>
@@ -141,13 +195,13 @@
                             <p class="fsocial tm">
                               <a href="https://facebook.com/perfocal">
                                 <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/facebook-grey.png" alt="Facebook" />
-                              </a> &nbsp; &nbsp; &nbsp;
+                              </a>&nbsp; &nbsp; &nbsp;
                               <a href="https://instagram.com/perfocal_official">
                                 <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/instagram-grey.png" alt="Instagram"/>
-                              </a> &nbsp; &nbsp; &nbsp;
+                              </a>&nbsp; &nbsp; &nbsp;
                               <a href="https://twitter.com/perfocal">
                                 <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/twitter-grey.png" alt="Twitter"/>
-                              </a> &nbsp; &nbsp; &nbsp;
+                              </a>&nbsp; &nbsp; &nbsp;
                               <a href="https://plus.google.com/+perfocal">
                                 <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/google-grey.png" alt="GooglePlus"/>
                               </a>

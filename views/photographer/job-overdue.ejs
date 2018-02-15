@@ -15,7 +15,7 @@
       <tr>
         <td class="email_body email_start tc pb">
           <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-          <table role="presentation" class="content_section bra box-shadow" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
               <tr>
                 <td class="content_cell content_b brt tc">
@@ -30,39 +30,64 @@
                   </table>
                 </td>
               </tr>
+              <tr>
+                <td class="content_cell pt pbe tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell pt tc">
+                          <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td class="">
+                                  <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/danger-red.png" width="48" height="48" alt="Information symbol" style="max-width:48px;" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h1>
+                            Job Overdue!
+                          </h1>
+                          <p class="lead">
+                            Please upload photos of booking <b>#<%= event.id %></b> as soon as possible.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Dear <%= photog.firstName %>,
+                          </p>
+                          <p>
+                            Please be reminded that your 12hr delivery window of booking <b>#<%= event.id %></b> has passed and <b>the job is now overdue.</b>
+                          </p>
+                          <p>
+                            According to our terms, your pay may be reduced due to late delivery if we do not receive unedited files of this booking by <b><%= starts %></b>. To allow our team edit and deliver final photos on-time, please upload the files as soon as possible.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
                 <tr>
-                  <td class="content_cell content_b py tc">
-                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <td class="column_cell tc">
+                    <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="column_cell py tc">
-                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="default_circle-border"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/key.png" width="48" height="48" alt="Secure" style="max-width:48px;" /></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <h1>
-                              Password reset
-                            </h1>
-                            <p class="lead">
-                              Someone has requested to have your password reset.
-                            </p>
-                            <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="accent_b-2">
-                                  	<a href="<%= verifyHref %>">
-                                  		<span>Reset password</span>
-                                  	</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <p class="mt mb_0 tm">
-                              <br/>Click the button above to reset the password of your Perfocal account. If this request was not from you, please ignore this message.
-                            </p>
+                          <td class="accent_b-2" width="208px;">
+                            <a href="<%= href %>">
+                              <span>Upload now</span>
+                            </a>
                           </td>
                         </tr>
                       </tbody>
@@ -70,8 +95,25 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+                  <td class="content_cell tc">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell tl switch_tc">
+                            <p>
+                              Thank you,
+                              <br>Perfocal Team
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
                 </tr>
+              </tr>
+              <tr>
+                <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+              </tr>
             </tbody>
           </table>
           <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->

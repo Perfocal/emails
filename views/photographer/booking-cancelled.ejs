@@ -15,7 +15,7 @@
       <tr>
         <td class="email_body email_start tc pb">
           <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-          <table role="presentation" class="content_section bra box-shadow" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
               <tr>
                 <td class="content_cell content_b brt tc">
@@ -30,38 +30,67 @@
                   </table>
                 </td>
               </tr>
+              <tr>
+                <td class="content_cell pt tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell pt tc">
+                          <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/sorry.png" width="64" height="64" alt="Sorry symbol" style="max-width:64px;" />
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h1>
+                            Please notice
+                          </h1>
+                          <p class="lead mb">
+                            Booking <b>#<%= event.id %></b> has been cancelled.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="content_cell" height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Hi <%= photog.firstName %>,
+                          </p>
+                          <p>
+                            Oh no! It seems that booking <b>#<%= event.id %></b> has been cancelled by the customer. Our team will notify you if there are additional details regarding the cancellation.
+                          </p>
+                          <p>
+                            Thank you again for working with Perfocal.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
                 <tr>
-                  <td class="content_cell content_b py tc">
+                  <td class="content_cell tc">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="column_cell py tc">
-                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="default_circle-border"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/key.png" width="48" height="48" alt="Secure" style="max-width:48px;" /></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <h1>
-                              Password reset
-                            </h1>
-                            <p class="lead">
-                              Someone has requested to have your password reset.
-                            </p>
-                            <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="accent_b-2">
-                                  	<a href="<%= verifyHref %>">
-                                  		<span>Reset password</span>
-                                  	</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <p class="mt mb_0 tm">
-                              <br/>Click the button above to reset the password of your Perfocal account. If this request was not from you, please ignore this message.
+                          <td class="column_cell tl switch_tc">
+                            <p>
+                              Regards,
+                              <br>Perfocal Team
                             </p>
                           </td>
                         </tr>
@@ -69,9 +98,10 @@
                     </table>
                   </td>
                 </tr>
-                <tr>
-                  <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
-                </tr>
+              </tr>
+              <tr>
+                <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+              </tr>
             </tbody>
           </table>
           <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->

@@ -15,7 +15,7 @@
       <tr>
         <td class="email_body email_start tc pb">
           <!--[if (mso)|(IE)]><table role="presentation" width="640" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align:top;width:640px;Margin:0 auto;"><tbody><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;border: 1px solid #EFEFEF;"><![endif]-->
-          <table role="presentation" class="content_section bra box-shadow" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <table role="presentation" class="content_section bra box-shadow content_b" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
               <tr>
                 <td class="content_cell content_b brt tc">
@@ -30,54 +30,110 @@
                   </table>
                 </td>
               </tr>
-                <tr>
-                  <td class="content_cell content_b py tc">
-                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="content_cell content_b pt tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell py tc">
+                          <p class="mb_xs tm">
+                            <%= event.firstName %>, meet your photographer
+                          </p>
+                          <p class="mb_xs imgr">
+                            <img role="img" src="<%= photog.avatar %>" width="96" height="96" alt="photographer profile" style="border-radius: 50%;max-width:96px;">
+                          </p>
+                          <h2 class="mt_0 mb_0">
+                            <%= photog.user.firstName %>
+                          </h2>
+                          <p class="lead">
+                            "<%= photog.bio %>"
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Hi <%= event.firstName %>,
+                          </p>
+                          <p>
+                            We have picked our talented pro <%= photog.user.firstName %> to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>.
+                          </p>
+                          <p>
+                            Feel free to view her/his profile at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="content_cell content_b pt pb">
+                  <!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_2">
+                    <table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="column_cell py tc">
-                            <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="default_circle-border"><img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/key.png" width="48" height="48" alt="Secure" style="max-width:48px;" /></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <h1>
-                              Password reset
-                            </h1>
-                            <p class="lead">
-                              Someone has requested to have your password reset.
-                            </p>
-                            <table role="presentation" class="ebtn mb tc" align="center" border="0" cellspacing="0" cellpadding="0">
-                              <tbody>
-                                <tr>
-                                  <td class="accent_b-2">
-                                  	<a href="<%= verifyHref %>">
-                                  		<span>Reset password</span>
-                                  	</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <p class="mt mb_0 tm">
-                              <br/>Click the button above to reset the password of your Perfocal account. If this request was not from you, please ignore this message.
-                            </p>
+                          <td class="default_b" style="min-width: 210px;">
+                            <a href="<%= href %>">
+                              <span>View details</span>
+                            </a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
-                </tr>
-            </tbody>
-          </table>
-          <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
-        </td>
-      </tr>
-    </tbody>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_2">
+                    <table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="content_b">
+                            <a href="sms://<%= photog.phone %>">
+                              <span>SMS <%= photog.user.firstName %> now</span>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+                <!--[if (mso)|(IE)]></td><![endif]-->
+              </tr>
+              <tr>
+                <td class="content_cell tc">
+                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="column_cell tl switch_tc">
+                          <p>
+                            Thank you,
+                            <br>Perfocal Team
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tr>
+            <tr>
+              <td class="content_cell content_b brb tc" height="16">&nbsp; </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--[if (mso)|(IE)]></td></tr></tbody></table><![endif]-->
+      </td>
+    </tr>
+  </tbody>
   </table>
   <!-- footer_alt -->
   <table role="presentation" class="email_table" width="100%" border="0" cellspacing="0" cellpadding="0">
