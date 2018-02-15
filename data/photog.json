@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "userId": 1,
+  "phone": "0123456789",
+  "bio": "testing testing 123",
+  "website": "https://vorontsov.co.uk",
+  "user": {
+    "id": 1,
+    "realm": "London",
+    "email": "aleksandr@vorontsov.co.uk",
+    "firstName": "Aleksandr",
+    "lastName": "Vorontsov",
+    "cityName": "London"
+  }
+}
