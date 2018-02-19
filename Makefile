@@ -9,6 +9,8 @@ lib/%.ejs: views/%.ejs $(DIRS)
 	@curl -X POST \
 				-H 'Content-type: application/x-www-form-urlencoded' \
 				--data-urlencode html\@$< 'https://templates.mailchimp.com/services/inline-css/' \
+	  | sed s"/&lt;/</" \
+	  | sed s"/&gt;/>/" \
 	> $@
 
 $(DIRS):
