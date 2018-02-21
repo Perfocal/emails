@@ -40,13 +40,13 @@
                             <%= event.firstName %>, meet your photographer
                           </p>
                           <p class="mb_xs imgr">
-                            <img role="img" src="<%= photog.avatar %>" width="96" height="96" alt="photographer profile" style="border-radius: 50%;max-width:96px;">
+                            <img role="img" src="<%= photog.avatar || https://s3-eu-west-1.amazonaws.com/perfocal-asset/images/default_profile.png %>" width="96" height="96" alt="photographer profile" style="border-radius: 50%;max-width:96px;">
                           </p>
                           <h2 class="mt_0 mb_0">
                             <%= photog.user.firstName %>
                           </h2>
                           <p class="lead">
-                            "<%= photog.bio %>"
+                            <%= photog.bio %>
                           </p>
                         </td>
                       </tr>
