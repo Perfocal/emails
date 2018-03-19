@@ -61,10 +61,10 @@
                             Hi <%= event.firstName %>,
                           </p>
                           <p>
-                            We have picked our talented pro <%= photog.user.firstName %> to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>.
+                            We have picked our talented pro <%= photog.user.firstName %> to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at <b><%= photog.phone %></b>.
                           </p>
                           <p>
-                            Feel free to view their profile at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
+                            Feel free to check at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
                           </p>
                         </td>
                       </tr>
@@ -74,28 +74,28 @@
               </tr>
               <tr>
                 <td class="content_cell content_b pt pb">
-                  <!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
                   <div class="col_2">
-                    <table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="default_b" style="min-width: 210px;">
-                            <a href="<%= href %>">
-                              <span>View details</span>
+                          <td class="default_b">
+                            <a href="sms://<%= photog.phone %>">
+                              <span>SMS <%= photog.user.firstName %> now</span>
                             </a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  <!--[if (mso)|(IE)]></td><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <!--[if (mso)|(IE)]><td width="312" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
                   <div class="col_2">
-                    <table role="presentation" style="min-width: 210px;" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <table role="presentation" class="ebtn mb mt tc" align="center" border="0" cellspacing="0" cellpadding="0">
                       <tbody>
                         <tr>
-                          <td class="content_b">
-                            <a href="sms://<%= photog.phone %>">
-                              <span>SMS <%= photog.user.firstName %> now</span>
+                          <td class="content_b" style="min-width: 210px;">
+                            <a href="<%= href %>">
+                              <span>View details</span>
                             </a>
                           </td>
                         </tr>
