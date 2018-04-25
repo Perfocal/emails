@@ -40,7 +40,8 @@
                             <%= event.firstName %>, meet your photographer
                           </p>
                           <p class="mb_xs imgr">
-                            <div role="img" style="border-radius: 50%; width: 96px; height: 96px; margin: auto; background:url(<%= photog.avatar %>) center center no-repeat; background-size: cover;">
+                            <div style="width:96px;height:96px;margin:auto;overflow:hidden;border-radius:50%;">
+                              <img role="img" height="96" width="96" alt="<%= photog.user.firstName %>'s avatar" src="<%= photog.avatar %>" alt="photographer profile" style="object-fit:cover;height:100%;border-radius:50%;">
                             </div>
                           </p>
                           <h2 class="mt_0 mb_0">
@@ -62,7 +63,7 @@
                             Hi <%= event.firstName %>,
                           </p>
                           <p>
-                            We have picked our talented pro <%= photog.user.firstName %> to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at <b><%= photog.phone %></b>.
+                            We have picked our talented pro  photog.user.firstName %> to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at <b><%= photog.phone %></b>.
                           </p>
                           <p>
                             Feel free to check at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
