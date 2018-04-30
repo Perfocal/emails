@@ -7,6 +7,13 @@
   <title>
     <%= subject %>
   </title>
+  <script type="application/json+trustpilot">
+    {
+      "recipientName": "<%= event.firstName %> <%= event.lastName %>",
+      "recipientEmail": "<%= event.email %>",
+      "referenceId": "<%= event.id %>"
+    }
+  </script>
 </head>
 
 <body>
