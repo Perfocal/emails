@@ -120,7 +120,7 @@ td {
 .column_cell h2,
 .column_cell h3,
 .column_cell h4 {
-  font-family: Avenir, Calibri, sans-serif; }
+  font-family: Muli, Calibri, sans-serif !important; }
 
 .column_cell h1,
 .column_cell h2,
@@ -567,37 +567,11 @@ ul li {
   src: local('Muli SemiBold'), local('Muli-SemiBold'), url(https://fonts.gstatic.com/s/muli/v10/UfnYe1HdWn9oxI4EauRTFgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-/* latin */
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v2/iJ4p9wO0GDKJ-D5teKuZqogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Nunito Sans Italic'), local('NunitoSans-Italic'), url(https://fonts.gstatic.com/s/nunitosans/v3/w9sy7IRyDFLWACdltghEwQeOulFbQKHxPa89BaxZzA0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
-
-/* latin */
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Nunito Sans SemiBold'), local('NunitoSans-SemiBold'), url(https://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHciAiQ_a33snTsJhwZvMEaI.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
   .ebtn a,
   .ebtn a span,
   .column_cell,
   .column_cell p{
-    font-family: "Nunito Sans", sans-serif !important;}
+    font-family: "Muli", sans-serif !important;}
   .column_cell h1,
   .column_cell h2,
   .column_cell h3,
