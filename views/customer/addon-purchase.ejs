@@ -76,15 +76,19 @@
                           </p>
                         </td>
                       </tr>
-                      <% addons.forEach(a => { %>
+                      <ol>
                         <tr>
                           <td class="column_cell tl switch_tc">
-                            <p>
-                              <span class="tl"><%= a.name %></span> - <span class="tr">&pound;<%= a.price / 100 %></span>
-                            </p>
+                            <% addons.forEach(a => { %>
+                              <li>
+                                <p>
+                                  <span class="tl"><%= a.name %></span> - <span class="tr">&pound;<%= a.price / 100 %></span>
+                                </p>
+                              </li>
+                            <% }); %>
                           </td>
                         </tr>
-                      <% }); %>
+                      </ol>
                       <tr>
                         <td class="column_cell tl switch_tc">
                           <p>
