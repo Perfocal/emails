@@ -72,7 +72,7 @@
                             Hi <%= event.firstName %>,
                           </p>
                           <p>
-                            Thank you for your recent purchase on Perfocal. The add-ons listed below have been added to your booking <b><%= event.id %></b>
+                            Thank you for your recent purchase on Perfocal. The add-ons listed below have been added to your booking <b>#<%= event.id %></b>
                           </p>
                         </td>
                       </tr>
@@ -82,17 +82,18 @@
                             <% addons.forEach(a => { %>
                               <li>
                                 <p>
-                                  <span class="tl"><%= a.name %></span> - <span class="tr">&pound;<%= a.price / 100 %></span>
+                                  <span class="tl"><%= a.name %></span><span style="float: right;"><b>&pound;<%= a.price / 100 %></b></span>
                                 </p>
                               </li>
                             <% }); %>
                           </td>
                         </tr>
                       </ol>
+                      <hr/>
                       <tr>
                         <td class="column_cell tl switch_tc">
                           <p>
-                            <span class="tl">Your total for this purchase:</span><span class="tr">&pound;<%= total %></span>
+                            <span class="tl">Your total for this purchase:</span><span style="float: right;"><b>&pound;<%= total %></b></span>
                           </p>
                         </td>
                       </tr>
