@@ -45,6 +45,10 @@
                           <p>
                             We're glad to let you know that your work for booking <b>#<%= event.id %></b> has been delivered. The client now has been given 5 days to confirm and your pay will be transferred into your Stripe account right after. Tap the button below to view this booking in your dashboard.
                           </p>
+                          <% if (!!note) { %>
+                            <p>The editors have left you a note regarding booking <b>#<%= event.id %></b>:</p>
+                            <blockquote><p>"<%= note %>"</p></blockquote>
+                          <% } %>
                         </td>
                       </tr>
                     </tbody>
