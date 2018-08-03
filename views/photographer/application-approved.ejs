@@ -70,6 +70,10 @@
                           <p>
                             We are thrilled to inform you that your application of joining Perfocal is now approved, congratulations!
                           </p>
+                          <% if (!!note) { %>
+                            <p>We have also left you a note regarding the photos that you submitted:</p>
+                            <blockquote><p>"<%= note %>"</p></blockquote>
+                          <% } %>
                           <p>
                             One last step, tell us how you can receive payments by connecting your Stripe account. Stripe is the best way to accept payments online. It handles billions of dollars every year for great companies like Facebook, Twitter, Kickstarter, and of course, Perfocal! What's better, it will be FREE for you (we'll cover all the transfer fees).
                           </p>

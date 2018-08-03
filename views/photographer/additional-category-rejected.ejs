@@ -83,6 +83,10 @@
                               Style of your work is not what we are currently after
                             </li>
                           </ul>
+                          <% if (!!note) { %>
+                            <p>We have also left you a note regarding the photos that you submitted:</p>
+                            <blockquote><p>"<%= note %>"</p></blockquote>
+                          <% } %>
                           <p>
                             Don't worry, you can still receive jobs for your previously approved categories. Whenever you are ready, please feel free to apply again to this or other categories.
                           </p>

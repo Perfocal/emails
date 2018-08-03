@@ -70,6 +70,10 @@
                           <p>
                             We are excited to let you know that your recent application was successful. Congratulations!
                           </p>
+                          <% if (!!note) { %>
+                            <p>We have also left you a note regarding the photos that you submitted:</p>
+                            <blockquote><p>"<%= note %>"</p></blockquote>
+                          <% } %>
                           <p>
                             You can now receive job requests for this category. To view or manage your job categories simply go to your dashboard.
                           </p>
