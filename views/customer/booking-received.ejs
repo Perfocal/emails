@@ -69,13 +69,9 @@
                           <p>
                             Hi <%= event.firstName %>,
                           </p>
-                          <% if (!!popup) { %>
-                            <p>We've received your booking, thank you!</p>
-                          <% } else { %>
-                            <p>
-                              We've received your booking, thank you! We'll notify you when your photographer has been arranged, which shouldn't take long. One less thing to worry about, way to go!
-                            </p>
-                          <% } %>
+                          <p>
+                            We've received your booking, thank you! We'll notify you when your photographer has been arranged, which shouldn't take long. One less thing to worry about, way to go!
+                          </p>
                           <p>
                             <b>Here are your booking details:</b>
                           </p>
@@ -172,31 +168,29 @@
                       </tbody>
                     </table>
                   </div>
-                  <% if (!!popup) { %>
-                    <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div class="col_4">
-                      <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody>
-                          <tr>
-                            <th class="column_cell" width="28px;">
-                              <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/note.png" width="28" height="28" alt="Note:&nbsp;" valign="middle" style="vertical-align: middle;">
-                            </th>
-                            <td class="column_cell tl">
-                              <p class="lead">
-                                Your notes:
-                              </p>
-                              <p class="tm">
-                                <b>No. of guests</b>: <%= event.numberOfGuests %> &nbsp;&nbsp;<b>Venue Type</b>: <%= event.venueType %>
-                              </p>
-                              <p class="tm">
-                                <b>Additional Details</b>: "<%= event.additionalDetails %>"
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  <% } %>
+                  <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                  <div class="col_4">
+                    <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <th class="column_cell" width="28px;">
+                            <img src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/note.png" width="28" height="28" alt="Note:&nbsp;" valign="middle" style="vertical-align: middle;">
+                          </th>
+                          <td class="column_cell tl">
+                            <p class="lead">
+                              Your notes:
+                            </p>
+                            <p class="tm">
+                              <b>No. of guests</b>: <%= event.numberOfGuests %> &nbsp;&nbsp;<b>Venue Type</b>: <%= event.venueType %>
+                            </p>
+                            <p class="tm">
+                              <b>Additional Details</b>: "<%= event.additionalDetails %>"
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                   <% if (!!last4 && !!amount) { %>
                   <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
                   <div class="col_4">
