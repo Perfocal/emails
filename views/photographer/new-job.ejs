@@ -181,11 +181,19 @@
                               <%= event.firstName %>'s Notes:
                             </p>
                             <p class="tm">
-                              <b>No. of guests</b>: <%= event.numberOfGuests %> &nbsp;&nbsp;<b>Venue Type</b>: <%= event.venueType %>
+                              <% if (!!event && !!event.numberOfGuests) { %>
+                              <b>No. of guests</b>: <%= event.numberOfGuests %>
+                              <% } %>
+                              &nbsp;&nbsp;
+                              <% if (!!event && !!event.venueType) { %>
+                              <b>Venue Type</b>: <%= event.venueType %>
+                              <% } %>
                             </p>
+                            <% if (!!event && !!event.additionalDetails) { %>
                             <p class="tm">
                               <b>Additional Details</b>: "<%= event.additionalDetails %>"
                             </p>
+                            <% } %>
                           </td>
                         </tr>
                       </tbody>
