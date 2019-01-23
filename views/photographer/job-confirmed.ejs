@@ -70,11 +70,19 @@
                             Hi <%= user.firstName %>,
                           </p>
                           <p>
-                            Congratulations, you have just secured booking <b>#<%= event.id %></b>. Yes, that <b><%= event.duration %> <%= event.sceneName %> shoot</b> on <b><%= starts %></b> at <b><%= event.address %>,</b> with an expected pay of <b><%= fee %></b>.
+                            Congratulations, you have just secured booking <b>#<%= event.id %></b>, the <b><%= event.duration %> <%= event.sceneName %> shoot</b> on <b><%= starts %></b> at <b><%= event.address %></b>!
                           </p>
-                          <p>
-                            Next, please <b>contact your client <%= event.firstName %> at <%= event.phone %></b> as soon as possible to arrange everything in detail. Once you've done the shooting, simply upload <b>unedited files</b> in your dashboard <b>within 12 hours after the shoot</b>, our editor team will take over from there so you can sit back and have a nice cup of tea :)
-                          </p>
+                          <p>Now what's next?</p>
+                          <ul>
+                            <li><p><span class="tp"><b>Call your client <%= event.firstName %> on <%= event.phone %></b></span>
+                              <br>Schedule a call with your client to discuss meet point, available lighting, space constraints and any other concerns they may have.<p></li>
+                            <li><p><span class="tp"><b>Prepare Your Equipment</b></span>
+                              <br>Remember to carry a backup portable flash (and batteries!), diffusers for your flash and any other required accessories for your shoot.</p></li>
+                            <li>
+                              <p><span class="tp"><b>Upload Your Work</b></span>
+                                <br>After the shoot, simply upload unedited files through your Perfocal dashboard <b>within 12 hours</b>. Our editors will handle the rest. </p></li>
+                          </ul>
+                          <p>For more guidance & tips, visit <a href="http://help.perfocal.com/for-photographers">here</a>.</p>
                         </td>
                       </tr>
                     </tbody>
@@ -90,7 +98,7 @@
                         <tr>
                           <td class="default_b">
                             <a href="sms://<%= event.phone %>;?&body=Hi%20there,%20I%20am%20your%20Perfocal%20photographer%20:)%20Could%20you%20tell%20me%20more%20about%20the%20shoot?%20">
-                              <span>SMS the client now</span>
+                              <span>Text the client</span>
                             </a>
                           </td>
                         </tr>
@@ -103,7 +111,7 @@
                       <tbody>
                         <tr>
                           <td class="content_b" style="min-width: 210px;">
-                            <a href="<%- href %>">
+                            <a href="- href %>">
                               <span>View in my dashboard</span>
                             </a>
                           </td>
@@ -183,9 +191,9 @@
                         <tr>
                           <td class="column_cell tl switch_tc">
                             <p>
-                              &copy; 2017 Perfocal Limited
+                              &copy; 2019 Perfocal Limited
                               <br/>
-                              <span class="tm">WeWork Aldgate Tower, 2 Leman Street, London, E1 8FA</span>
+                              <span class="tm">Rocketspace, 40 Islington High Street, London, N1 8EQ</span>
                             </p>
                             <!-- <p class="mb_0"><a href="#"><span>About</span></a> &nbsp; &nbsp; <a href="#"><span>Products</span></a> &nbsp; &nbsp; <a href="#"><span>Help</span></a> &nbsp; &nbsp; <a href="#"><span>Unsubscribe</span></a></p> -->
                           </td>
