@@ -70,8 +70,17 @@
                             Hi <%= photog.firstName %>,
                           </p>
                           <p>
-                            Oh no! You are hated
+                            Oh no! You are hated because of these reasons:
                           </p>
+                          <ul class="tl" style="Margin:0 16px; padding:0;">
+                            <% for (var i=0; i<reasons.length; i++) { %>
+                              <li style="Margin:0 0 1em; list-style:disc inside; mso-special-format:bullet;">
+                                <div>
+                                  <%= reasons[i] %>
+                                </div>
+                              </li>
+                            <% } %>
+                          </ul>
                           <p>
                             Thank you again for working with Perfocal.
                           </p>
