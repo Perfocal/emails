@@ -31,33 +31,6 @@
                 </td>
               </tr>
               <tr>
-                <td class="content_cell pt tc">
-                  <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody>
-                      <tr>
-                        <td class="column_cell pt tc">
-                          <table role="presentation" class="ic_h" align="center" width="80" border="0" cellspacing="0" cellpadding="0">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <img role="img" src="https://s3-eu-west-1.amazonaws.com/perfocal-asset/email/icons/sorry.png" width="64" height="64" alt="Sorry symbol" style="max-width:64px;" />
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <h1>
-                            Please notice
-                          </h1>
-                          <p class="lead mb">
-                            You have been deactivated because we don't like you
-                          </p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <tr>
                 <td class="content_cell tc">
                   <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
@@ -70,19 +43,21 @@
                             Hi <%= photog.firstName %>,
                           </p>
                           <p>
-                            Oh no! You are hated because of these reasons:
+                            HEADER
                           </p>
                           <ul class="tl" style="Margin:0 16px; padding:0;">
                             <% for (var i=0; i<reasons.length; i++) { %>
                               <li style="Margin:0 0 1em; list-style:disc inside; mso-special-format:bullet;">
-                                <div>
-                                  <%= reasons[i] %>
-                                </div>
+                                <%= reasons[i] %>
                               </li>
                             <% } %>
                           </ul>
+                          <% if (!!note) { %>
+                            <p>You have also received a note detailing additional details regarding your account deactivation from our management team:</p>
+                            <blockquote><p>"<%= note %>"</p></blockquote>
+                          <% } %>
                           <p>
-                            Thank you again for working with Perfocal.
+                            FOOTER
                           </p>
                         </td>
                       </tr>
@@ -163,7 +138,7 @@
                             <p>
                               &copy; 2017 Perfocal Limited
                               <br/>
-                              <span class="tm">WeWork Aldgate Tower, 2 Leman Street, London, E1 8FA</span>
+                              <span class="tm">Rocketspace, 40 Islington High Street, London, N1 8EQ</span>
                             </p>
                             <!-- <p class="mb_0"><a href="#"><span>About</span></a> &nbsp; &nbsp; <a href="#"><span>Products</span></a> &nbsp; &nbsp; <a href="#"><span>Help</span></a> &nbsp; &nbsp; <a href="#"><span>Unsubscribe</span></a></p> -->
                           </td>
