@@ -199,7 +199,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <% if (!!last4 && !!amount) { %>
+                  <% if (!!amount) { %>
                   <!--[if (mso)|(IE)]></td><td width="624" style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
                   <div class="col_4">
                     <table role="presentation" class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -210,7 +210,7 @@
                           </th>
                           <td class="column_cell tl">
                             <p class="lead">
-                              <b><%= amount %></b> paid with your card ending in <%= last4 %>.
+                              <b><%= amount %></b> paid with your card.
                             </p>
                           </td>
                         </tr>
