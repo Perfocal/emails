@@ -37,16 +37,20 @@
                       <tr>
                         <td class="column_cell py tc">
                           <p class="mb_xs tm">
-                            <%= event.firstName %>, meet your photographer
+                            <%= event.firstName %>, meet your photographer(s)
                           </p>
-                          <p class="mb_xs imgr">
-                            <div style="width:96px;height:96px;margin:auto;overflow:hidden;border-radius:50%;">
-                              <img role="img" height="96" width="96" alt="<%= photog.user.firstName %>'s avatar" src="<%= photog.avatar %>" alt="photographer profile" style="object-fit:cover;height:100%;border-radius:50%;">
-                            </div>
-                          </p>
-                          <h2 class="mt_0 mb_0">
-                            <%= photog.user.firstName %>
-                          </h2>
+                          <% photographers.forEach(a => { %>
+                            <p class="mb_xs imgr">
+                              <div style="width:96px;height:96px;margin:auto;overflow:hidden;border-radius:50%;">
+                                <img role="img" height="96" width="96" alt="<%= a.firstName %>'s avatar" src="<%= a.avatar %>" alt="photographer profile" style="object-fit:cover;height:100%;border-radius:50%;">
+                              </div>
+                            </p>
+                          <% }) %>
+                          <% photographers.forEach(a => { %>
+                            <h2 class="mt_0 mb_0">
+                              <%= a.firstName %>
+                            </h2>
+                          <% }) %>
                         </td>
                       </tr>
                     </tbody>
@@ -63,7 +67,14 @@
                             Hi <%= event.firstName %>,
                           </p>
                           <p>
-                            We have picked our talented pro <%= photog.user.firstName %> to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at <b><%= photog.phone %></b>.
+                            We have picked our talented pro(s)
+                              <% photographers.forEach(a => { %>
+                                <%= a.firstName %>
+                              <% }) %>
+                            to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at 
+                              <% photographers.forEach(a => { %>
+                                <b><%= a.phone %></b>.
+                              <% }) %>
                           </p>
                           <p>
                             Feel free to check at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
@@ -82,9 +93,11 @@
                       <tbody>
                         <tr>
                           <td class="default_b">
-                            <a href="sms://<%= photog.phone %>">
-                              <span>SMS <%= photog.user.firstName %> now</span>
-                            </a>
+                              <% photographers.forEach(a => { %>
+                                <a href="sms://<%= a.phone %>">
+                                  <span>SMS <%= a.firstName %> now</span>
+                                </a>
+                              <% }) %>
                           </td>
                         </tr>
                       </tbody>
