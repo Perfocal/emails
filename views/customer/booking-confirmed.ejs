@@ -39,7 +39,7 @@
                           <p class="mb_xs tm">
                             <%= event.firstName %>, meet your photographer(s)
                           </p>
-                          <% photographers.forEach(a => { %>
+                          <!-- <% photographers.forEach(a => { %>
                             <p class="mb_xs imgr">
                               <div style="width:96px;height:96px;margin:auto;overflow:hidden;border-radius:50%;">
                                 <img role="img" height="96" width="96" alt="<%= a.firstName %>'s avatar" src="<%= a.avatar %>" alt="photographer profile" style="object-fit:cover;height:100%;border-radius:50%;">
@@ -50,7 +50,15 @@
                             <h2 class="mt_0 mb_0">
                               <%= a.firstName %>
                             </h2>
-                          <% }) %>
+                          <% }) %> -->
+                          <p class="mb_xs imgr">
+                            <div style="width:96px;height:96px;margin:auto;overflow:hidden;border-radius:50%;">
+                              <img role="img" height="96" width="96" alt="<%= photographers[0].firstName %>'s avatar" src="<%= photographers[0].avatar %>" alt="photographer profile" style="object-fit:cover;height:100%;border-radius:50%;">
+                            </div>
+                          </p>
+                          <h2 class="mt_0 mb_0">
+                            <%= photographers[0].firstName %>
+                          </h2>
                         </td>
                       </tr>
                     </tbody>
@@ -68,13 +76,15 @@
                           </p>
                           <p>
                             We have picked our talented pro(s)
-                              <% photographers.forEach(a => { %>
+                              <%= photographers[0].firstName %>
+                              <!-- <% photographers.forEach(a => { %>
                                 <%= a.firstName %>
-                              <% }) %>
+                              <% }) %> -->
                             to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at 
-                              <% photographers.forEach(a => { %>
+                              <%= photographers[0].phone %>
+                              <!-- <% photographers.forEach(a => { %>
                                 <b><%= a.phone %></b>.
-                              <% }) %>
+                              <% }) %> -->
                           </p>
                           <p>
                             Feel free to check at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
@@ -93,11 +103,14 @@
                       <tbody>
                         <tr>
                           <td class="default_b">
-                              <% photographers.forEach(a => { %>
+                              <!-- <% photographers.forEach(a => { %>
                                 <a href="sms://<%= a.phone %>">
                                   <span>SMS <%= a.firstName %> now</span>
                                 </a>
-                              <% }) %>
+                              <% }) %> -->
+                              <a href="sms://<%= photographers[0].phone %>">
+                                <span>SMS <%= photographers[0].firstName %> now</span>
+                              </a>
                           </td>
                         </tr>
                       </tbody>
