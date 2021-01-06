@@ -67,17 +67,20 @@
                             Hi <%= event.firstName %>,
                           </p>
                           <p>
-                            We have picked our talented pro(s)
-                              <% photographers.forEach(a => { %>
-                                <%= a.firstName %>
-                              <% }) %>
-                            to capture your event on <b><%= starts %></b> at <b><%= event.address %></b>. They can be contacted at 
-                              <% photographers.forEach(a => { %>
-                                <b><%= a.phone %></b>.
-                              <% }) %>
+                            We have picked one of our talented photographers for your shoot!
                           </p>
                           <p>
-                            Feel free to check at your booking page, or send a message right away. Alternatively, your photographer will be in touch shortly.
+                            <% photographers.forEach(a => { %>
+                              <%= a.firstName %>
+                            <% }) %>
+                            will meet you at <b><%= starts %></b> at <b><%= event.address %></b>.
+                          </p>
+                          <p>
+                            Feel free to message or ring them on
+                            <% photographers.forEach(a => { %>
+                              <b><%= a.phone %></b>,
+                            <% }) %>
+                             alternatively, your photographer will be in touch shortly.
                           </p>
                         </td>
                       </tr>
